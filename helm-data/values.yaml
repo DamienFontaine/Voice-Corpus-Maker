@@ -1,0 +1,14 @@
+# Mongo Server
+#
+mongo:
+  path: /opt/voice-corpus-maker/lunarc/db/
+  image: mongo:3.4
+
+# Voice Corpus Maker Server
+#
+vcm:
+  name: vcm
+  config: /go/src/gitlab.lineolia.net/meda/voice-corpus-maker/
+  image: docker.lineolia.net/meda/voice-corpus-maker:0.0.1
+  host: test.lineolia.net
+  port: 8888

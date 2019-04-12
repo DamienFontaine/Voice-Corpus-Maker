@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{.Values.vcm.name}}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{.Values.vcm.name}}
+    spec:
+      containers:
+      - env:
+        - name: env
+          value: production
+        image: {{.Values.vcm.image}}
+        name: {{.Values.vcm.name}}
+        resources: {}
+      restartPolicy: Always
+status: {}

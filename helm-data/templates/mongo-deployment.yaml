@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mongo
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mongo
+    spec:
+      selector:
+        app: mongo
+      containers:
+      - args:
+        - --auth
+        image: {{.Values.mongo.image}}
+        name: mongo
+        resources: {}
+        volumeMounts:
+        - mountPath: /data/db
+          name: mongo-db
+      restartPolicy: Always
+      volumes:
+      - name: mongo-db
+        hostPath:
+          path: {{.Values.mongo.path}}
+status: {}

@@ -1,0 +1,13 @@
+apiVersion: v1
+name: vcm
+version: 0.0.1
+appVersion: 0.0.1
+description: Voice Corpus Maker
+keywords:
+- test
+home: https://www.lineolia.net
+maintainers:
+- name: Damien Fontaine
+  email: damien.fontaine@lineolia.net
+  url: https://www.lineolia.net
+engine: gotpl

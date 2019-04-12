@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{.Values.vcm.name}}-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: {{.Values.vcm.host}}
+    http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: {{.Values.vcm.name}}-http
+          servicePort: 80

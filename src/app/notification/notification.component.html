@@ -1,0 +1,4 @@
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="alert alert-{{notification.alert}}">
+  {{notification.text}}
+  <fa-icon (click)="close()" [icon]="faWindowClose" class="close"></fa-icon>
+</div>
