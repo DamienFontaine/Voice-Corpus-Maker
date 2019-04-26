@@ -1,0 +1,23 @@
+@import "jekyll-theme-slate";
+
+/*******************************************************************************
+VCM Styles
+*******************************************************************************/
+
+.thumbnail {
+  width: 400px;
+}
+
+.box {
+  display: inline-block;
+  width: 400px;
+}
+.empty {
+  display: inline-block;
+  width: 100px;
+}
+
+.caption {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
