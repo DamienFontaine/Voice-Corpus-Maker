@@ -3,3 +3,6 @@ description: >-
   Make your own voice corpus
 
 markdown: kramdown
+
+# Google Analytics
+google_analytics: UA-139466833-1
